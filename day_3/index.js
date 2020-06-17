@@ -20,7 +20,7 @@ const arrayEmpat = [13, 14, 15, 16];
  *
  * SOLUTION
  *
- * Yang paling efesien adalah concat
+ * Yang paling efesien adalah concat dengan multi argument
  * 
  */
 
@@ -32,14 +32,22 @@ console.time('merging array');
 
 // Solusi no 2.
 
-const arrayGabung = arraySatu.concat(arrayDua).concat(arrayTiga).concat(arrayEmpat);
+// const arrayGabung = arraySatu.concat(arrayDua).concat(arrayTiga).concat(arrayEmpat);
 
 // Solusi no 3.
 
 // arrayDua.forEach(item => arraySatu.push(item));
 // const arrayGabung = arraySatu;
 
+// Solusi no 4.
+// const arrayGabung = arraySatu.concat(arrayDua, arrayTiga, arrayEmpat);
+
+// Solusi no 5.
+// const arrayGabung = Array.prototype.concat(arraySatu, arrayDua, arrayTiga, arrayEmpat);
+const arrayGabung = [].concat(arraySatu, arrayDua, arrayTiga, arrayEmpat);
+
 console.timeEnd('merging array');
+console.log(arrayGabung);
 
 
 
