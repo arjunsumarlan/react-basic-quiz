@@ -22,6 +22,8 @@ const arrayEmpat = [13, 14, 15, 16];
  *
  * Yang paling efesien adalah concat dengan multi argument
  * 
+ * dan ada masalah efesiensi bisa baca disini https://stackoverflow.com/a/5081471
+ * 
  */
 
 console.time('merging array');
